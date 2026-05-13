@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Header from './Header'
+import Project from '../pages/Projects'
 
 const Hero = () => {
   const [displayText, setDisplayText] = useState('')
@@ -58,7 +59,7 @@ const Hero = () => {
       title: 'Développeur Full Stack',
       description: 'Je transforme vos idées en applications web modernes, performantes et élégantes.',
       contactBtn: 'Me contacter',
-      projectsBtn: 'Voir mes projets',
+      projectsBtn: 'Voir mes competence',
       experience : 'Voir mes expérience'
     },
     en: {
@@ -67,7 +68,7 @@ const Hero = () => {
       title: 'Full Stack Developer',
       description: 'I turn your ideas into modern, performant, and elegant web applications.',
       contactBtn: 'Contact me',
-      projectsBtn: 'View my projects',
+      projectsBtn: 'View my skills',
       experience : 'Vies my experience'
     }
   }
@@ -117,7 +118,7 @@ const Hero = () => {
                 {t.projectsBtn}
               </button>
               <button
-                onClick={() => scrollToSection('../pages/Projects.jsx')}
+                onClick={() => scrollToSection(<Project/>)}
                 className="btn-secondary"
               >
                 {t.experience}
