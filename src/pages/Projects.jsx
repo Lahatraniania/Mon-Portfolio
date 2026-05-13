@@ -143,7 +143,7 @@ const Projects = () => {
         title: "E-commerce Platform",
         description: "Internship project at Spray Info. Complete e-commerce platform.",
         longDescription: "E-commerce solution:\n• Product catalog\n• Shopping cart\n• Secure payment\n• Inventory management\n• Seller dashboard\n• Recommendations\n• Multilingual\n• SEO optimized\n• Responsive\n• Sales statistics",
-        image: "/src/assets/images/projet5.jpg",
+        image: "/src/assets/images/projet5.png",
         technologies: ["React", "Symfony", "Tailwind CSS", "PostgreSQL", "API Platform"],
         date: "2025",
         category: "web"
@@ -163,7 +163,7 @@ const Projects = () => {
         title: "BAMAFI Member Card Management",
         description: "Mobile app for BAMAFI association member card verification.",
         longDescription: "Solution:\n• QR code scanning\n• Real-time verification\n• Membership management\n• Dues tracking\n• Admin dashboard\n• Report generation\n• History tracking\n• Data export\n• Fast interface",
-        image: "/src/assets/images/projet7.jpg",
+        image: "/src/assets/images/projet7.png",
         technologies: ["React Native", "Expo Go", "PostgreSQL", "Node.js"],
         date: "2026",
         category: "mobile"
