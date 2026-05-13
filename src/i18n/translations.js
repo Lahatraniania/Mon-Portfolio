@@ -12,7 +12,7 @@
       title: 'Développeur Full Stack',
       description: 'Créateur d\'applications web modernes et performantes',
       contactBtn: 'Me contacter',
-      projectsBtn: 'Voir mes projets'
+      projectsBtn: 'Voir mes compétence'
     },
     about: {
       title: 'À propos de moi',
@@ -54,7 +54,7 @@
       title: 'Full Stack Developer',
       description: 'Creating modern and performant web applications',
       contactBtn: 'Contact me',
-      projectsBtn: 'View my projects'
+      projectsBtn: 'View my competence'
     },
     about: {
       title: 'About me',

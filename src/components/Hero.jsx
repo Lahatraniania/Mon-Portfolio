@@ -58,7 +58,8 @@ const Hero = () => {
       title: 'Développeur Full Stack',
       description: 'Je transforme vos idées en applications web modernes, performantes et élégantes.',
       contactBtn: 'Me contacter',
-      projectsBtn: 'Voir mes projets'
+      projectsBtn: 'Voir mes projets',
+      experience : 'Voir mes expérience'
     },
     en: {
       greeting: 'Hello, I am',
@@ -66,7 +67,8 @@ const Hero = () => {
       title: 'Full Stack Developer',
       description: 'I turn your ideas into modern, performant, and elegant web applications.',
       contactBtn: 'Contact me',
-      projectsBtn: 'View my projects'
+      projectsBtn: 'View my projects',
+      experience : 'Vies my experience'
     }
   }
 
@@ -113,6 +115,12 @@ const Hero = () => {
                 className="btn-secondary"
               >
                 {t.projectsBtn}
+              </button>
+              <button
+                onClick={() => scrollToSection('../pages/Projects.jsx')}
+                className="btn-secondary"
+              >
+                {t.experience}
               </button>
             </div>
           </div>

@@ -63,6 +63,9 @@ const Header = () => {
             <button onClick={() => scrollToSection('contact')} className="hover:opacity-70 transition">
               {t.contact}
             </button>
+            <button onClick={() => scrollToSection('../pages/Projects.jsx')} className="hover:opacity-70 transition">
+              {t.experices}
+            </button>
             
             <div className="flex gap-2 ml-4">
               <button
