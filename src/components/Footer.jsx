@@ -65,8 +65,8 @@ const Footer = () => {
           <div className="text-center">
             <h3 className="text-xl font-semibold mb-4">{t.contact}</h3>
             <div className="space-y-2 opacity-75">
-              <p>📧 lahatra@example.com</p>
-              <p>📱 +261 34 00 000 00</p>
+              <p>📧 lahatranandra@gmail.com</p>
+              <p>📱 +261 34 43 669 43</p>
               <p>📍 Antananarivo, Madagascar</p>
             </div>
           </div>

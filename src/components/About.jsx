@@ -1,28 +1,22 @@
 import { useState, useEffect } from 'react'
 
 const About = () => {
-  const [language, setLanguage] = useState('fr')
+  const [language, setLanguage] = useState(() => {
+    // Initialisation directe sans useEffect
+    return localStorage.getItem('language') || 'fr'
+  })
 
+  // Effet UNIQUEMENT pour écouter les changements externes
   useEffect(() => {
-    // Lire directement depuis localStorage sans setState dans l'effet
-    const checkLanguage = () => {
-      const savedLanguage = localStorage.getItem('language')
-      if (savedLanguage && savedLanguage !== language) {
-        setLanguage(savedLanguage)
-      }
-    }
-    
-    checkLanguage()
-    
     const handleStorageChange = (e) => {
-      if (e.key === 'language' && e.newValue) {
-        setLanguage(e.newValue)
+      if (e.key === 'language') {
+        setLanguage(e.newValue || 'fr')
       }
     }
     
     window.addEventListener('storage', handleStorageChange)
     return () => window.removeEventListener('storage', handleStorageChange)
-  }, [language]) 
+  }, [])  // ← Tableau vide, pas de setState synchrone
 
   const translations = {
     fr: {
@@ -54,28 +48,17 @@ const About = () => {
         
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="space-y-6">
-            <p className="text-lg leading-relaxed opacity-80">
-              {t.description1}
-            </p>
-            <p className="text-lg leading-relaxed opacity-80">
-              {t.description2}
-            </p>
-            <p className="text-lg leading-relaxed opacity-80">
-              {t.description3}
-            </p>
-            <button className="btn-primary inline-block">
-              {t.downloadCV}
-            </button>
+            <p className="text-lg leading-relaxed opacity-80">{t.description1}</p>
+            <p className="text-lg leading-relaxed opacity-80">{t.description2}</p>
+            <p className="text-lg leading-relaxed opacity-80">{t.description3}</p>
+            <button className="btn-primary inline-block">{t.downloadCV}</button>
           </div>
           
           <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
             <h3 className="text-2xl font-bold mb-6 text-center">{t.technologies}</h3>
             <div className="flex flex-wrap gap-3 justify-center">
               {techStack.map((tech, index) => (
-                <span
-                  key={index}
-                  className="px-4 py-2 bg-gray-100 dark:bg-gray-700 rounded-full text-sm font-semibold hover:scale-105 transition-transform cursor-pointer"
-                >
+                <span key={index} className="px-4 py-2 bg-gray-100 dark:bg-gray-700 rounded-full text-sm font-semibold hover:scale-105 transition-transform cursor-pointer">
                   {tech}
                 </span>
               ))}

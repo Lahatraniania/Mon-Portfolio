@@ -2,31 +2,26 @@ import { useState, useEffect } from 'react'
 import emailjs from '@emailjs/browser'
 
 const Contact = () => {
-  const [language, setLanguage] = useState('fr')
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
   const [status, setStatus] = useState({ type: '', message: '' })
   const [isLoading, setIsLoading] = useState(false)
 
+  const [language, setLanguage] = useState(() => {
+    // Initialisation directe sans useEffect
+    return localStorage.getItem('language') || 'fr'
+  })
+
+  // Effet UNIQUEMENT pour écouter les changements externes
   useEffect(() => {
-    // Lire directement depuis localStorage sans setState dans l'effet
-    const checkLanguage = () => {
-      const savedLanguage = localStorage.getItem('language')
-      if (savedLanguage && savedLanguage !== language) {
-        setLanguage(savedLanguage)
-      }
-    }
-    
-    checkLanguage()
-    
     const handleStorageChange = (e) => {
-      if (e.key === 'language' && e.newValue) {
-        setLanguage(e.newValue)
+      if (e.key === 'language') {
+        setLanguage(e.newValue || 'fr')
       }
     }
     
     window.addEventListener('storage', handleStorageChange)
     return () => window.removeEventListener('storage', handleStorageChange)
-  }, [language])
+  }, []) 
 
   const translations = {
     fr: {

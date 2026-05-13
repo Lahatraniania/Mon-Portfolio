@@ -2,33 +2,28 @@ import { useState, useEffect } from 'react'
 import Header from './Header'
 
 const Hero = () => {
-  const [language, setLanguage] = useState('fr')
   const [displayText, setDisplayText] = useState('')
   const titles = ['React', 'Next.js', 'Node.js', 'PHP','Symfony']
   const [titleIndex, setTitleIndex] = useState(0)
   const [charIndex, setCharIndex] = useState(0)
   const [isDeleting, setIsDeleting] = useState(false)
 
+  const [language, setLanguage] = useState(() => {
+    // Initialisation directe sans useEffect
+    return localStorage.getItem('language') || 'fr'
+  })
+
+  // Effet UNIQUEMENT pour écouter les changements externes
   useEffect(() => {
-    // Lire directement depuis localStorage sans setState dans l'effet
-    const checkLanguage = () => {
-      const savedLanguage = localStorage.getItem('language')
-      if (savedLanguage && savedLanguage !== language) {
-        setLanguage(savedLanguage)
-      }
-    }
-    
-    checkLanguage()
-    
     const handleStorageChange = (e) => {
-      if (e.key === 'language' && e.newValue) {
-        setLanguage(e.newValue)
+      if (e.key === 'language') {
+        setLanguage(e.newValue || 'fr')
       }
     }
     
     window.addEventListener('storage', handleStorageChange)
     return () => window.removeEventListener('storage', handleStorageChange)
-  }, [language])
+  }, []) 
 
   useEffect(() => {
     const currentTitle = titles[titleIndex]

@@ -1,28 +1,22 @@
 import { useState, useEffect } from 'react'
 
 const Skills = () => {
-  const [language, setLanguage] = useState('fr')
+  const [language, setLanguage] = useState(() => {
+    // Initialisation directe sans useEffect
+    return localStorage.getItem('language') || 'fr'
+  })
 
+  // Effet UNIQUEMENT pour écouter les changements externes
   useEffect(() => {
-    // Lire directement depuis localStorage sans setState dans l'effet
-    const checkLanguage = () => {
-      const savedLanguage = localStorage.getItem('language')
-      if (savedLanguage && savedLanguage !== language) {
-        setLanguage(savedLanguage)
-      }
-    }
-    
-    checkLanguage()
-    
     const handleStorageChange = (e) => {
-      if (e.key === 'language' && e.newValue) {
-        setLanguage(e.newValue)
+      if (e.key === 'language') {
+        setLanguage(e.newValue || 'fr')
       }
     }
     
     window.addEventListener('storage', handleStorageChange)
     return () => window.removeEventListener('storage', handleStorageChange)
-  }, [language])
+  }, []) 
 
   const translations = {
     fr: { title: 'Mes compétences', frontend: 'Frontend', backend: 'Backend', database: 'Base de données' },
