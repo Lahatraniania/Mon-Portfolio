@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import ThemeToggle from './ThemeToggle'
-// Supprimer l'import de useTheme car pas utilisé
 
 const Header = () => {
   const [language, setLanguage] = useState(() => {
@@ -21,11 +20,21 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-
-
   const translations = {
-  fr: { home: 'Accueil', about: 'À propos', skills: 'Compétences', projects: 'Projets', contact: 'Contact' },
-  en: { home: 'Home', about: 'About', skills: 'Skills', projects: 'Projects', contact: 'Contact' }
+    fr: { 
+      home: 'Accueil', 
+      about: 'À propos', 
+      skills: 'Compétences', 
+      projects: 'Projets',  // ← Ajout de projects
+      contact: 'Contact' 
+    },
+    en: { 
+      home: 'Home', 
+      about: 'About', 
+      skills: 'Skills', 
+      projects: 'Projects',  // ← Ajout de projects
+      contact: 'Contact' 
+    }
   }
 
   const t = translations[language]
@@ -60,11 +69,11 @@ const Header = () => {
             <button onClick={() => scrollToSection('skills')} className="hover:opacity-70 transition">
               {t.skills}
             </button>
+            <button onClick={() => scrollToSection('projects')} className="hover:opacity-70 transition">
+              {t.projects}  {/* ← CORRIGÉ : affiche "Projets" */}
+            </button>
             <button onClick={() => scrollToSection('contact')} className="hover:opacity-70 transition">
               {t.contact}
-            </button>
-            <button onClick={() => scrollToSection('../pages/Projects.jsx')} className="hover:opacity-70 transition">
-              {t.experices}
             </button>
             
             <div className="flex gap-2 ml-4">
@@ -103,14 +112,15 @@ const Header = () => {
           </div>
         </div>
 
+        {/* Menu mobile corrigé */}
         {isMenuOpen && (
           <div className="md:hidden mt-4 py-4 border-t border-gray-200 dark:border-gray-700">
             <div className="flex flex-col space-y-4">
               <button onClick={() => scrollToSection('hero')} className="text-left hover:opacity-70">{t.home}</button>
               <button onClick={() => scrollToSection('about')} className="text-left hover:opacity-70">{t.about}</button>
               <button onClick={() => scrollToSection('skills')} className="text-left hover:opacity-70">{t.skills}</button>
+              <button onClick={() => scrollToSection('projects')} className="text-left hover:opacity-70">{t.projects}</button>  {/* ← AJOUTÉ */}
               <button onClick={() => scrollToSection('contact')} className="text-left hover:opacity-70">{t.contact}</button>
-              <button onClick={() => scrollToSection('projects')} className="hover:opacity-70 transition">{t.projects}</button>
             </div>
           </div>
         )}

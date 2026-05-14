@@ -1,20 +1,17 @@
 import { useState, useEffect } from 'react'
 import Header from './Header'
-import Project from '../pages/Projects'
 
 const Hero = () => {
   const [displayText, setDisplayText] = useState('')
-  const titles = ['React', 'Next.js', 'Node.js', 'PHP','Symfony']
+  const titles = ['React', 'Tailwind CSS', 'Next.js', 'Node.js', 'PHP', 'Symfony']
   const [titleIndex, setTitleIndex] = useState(0)
   const [charIndex, setCharIndex] = useState(0)
   const [isDeleting, setIsDeleting] = useState(false)
 
   const [language, setLanguage] = useState(() => {
-    // Initialisation directe sans useEffect
     return localStorage.getItem('language') || 'fr'
   })
 
-  // Effet UNIQUEMENT pour écouter les changements externes
   useEffect(() => {
     const handleStorageChange = (e) => {
       if (e.key === 'language') {
@@ -24,7 +21,7 @@ const Hero = () => {
     
     window.addEventListener('storage', handleStorageChange)
     return () => window.removeEventListener('storage', handleStorageChange)
-  }, []) 
+  }, [])
 
   useEffect(() => {
     const currentTitle = titles[titleIndex]
@@ -59,8 +56,8 @@ const Hero = () => {
       title: 'Développeur Full Stack',
       description: 'Je transforme vos idées en applications web modernes, performantes et élégantes.',
       contactBtn: 'Me contacter',
-      projectsBtn: 'Voir mes competence',
-      experience : 'Voir mes expérience'
+      skillsBtn: 'Mes compétences',
+      projectsBtn: 'Mes projets'  // ← Changé : projects au lieu de skills
     },
     en: {
       greeting: 'Hello, I am',
@@ -68,8 +65,8 @@ const Hero = () => {
       title: 'Full Stack Developer',
       description: 'I turn your ideas into modern, performant, and elegant web applications.',
       contactBtn: 'Contact me',
-      projectsBtn: 'View my skills',
-      experience : 'Vies my experience'
+      skillsBtn: 'My skills',
+      projectsBtn: 'My projects'  // ← Changé : projects au lieu de skills
     }
   }
 
@@ -115,13 +112,13 @@ const Hero = () => {
                 onClick={() => scrollToSection('skills')}
                 className="btn-secondary"
               >
-                {t.projectsBtn}
+                {t.skillsBtn}
               </button>
               <button
-                onClick={() => scrollToSection(<Project/>)}
+                onClick={() => scrollToSection('projects')}  // ← CORRIGÉ : redirige vers projets
                 className="btn-secondary"
               >
-                {t.experience}
+                {t.projectsBtn}
               </button>
             </div>
           </div>
