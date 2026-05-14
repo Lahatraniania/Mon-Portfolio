@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react'
 
 // Import des images (vérifie que l'extension est correcte : .jpg, .png, etc.)
-import projet1 from '../assets/images/projet1.jpg'
-import projet2 from '../assets/images/projet2.jpg'
-import projet3 from '../assets/images/projet3.jpg'
-import projet4 from '../assets/images/projet4.jpg'
-import projet5 from '../assets/images/projet5.jpg'
-import projet6 from '../assets/images/projet6.jpg'
-import projet7 from '../assets/images/projet7.jpg'
+import projet1 from '../assets/images/projet1.png'
+import projet2 from '../assets/images/projet2.png'
+import projet3 from '../assets/images/projet3.png'
+import projet4 from '../assets/images/projet4.png'
+import projet5 from '../assets/images/projet5.png'
+import projet6 from '../assets/images/projet6.png'
+import projet7 from '../assets/images/projet7.png'
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null)
