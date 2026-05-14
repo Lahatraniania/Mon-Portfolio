@@ -2,11 +2,9 @@ import { useState, useEffect } from 'react'
 
 const About = () => {
   const [language, setLanguage] = useState(() => {
-    // Initialisation directe sans useEffect
     return localStorage.getItem('language') || 'fr'
   })
 
-  // Effet UNIQUEMENT pour écouter les changements externes
   useEffect(() => {
     const handleStorageChange = (e) => {
       if (e.key === 'language') {
@@ -16,7 +14,7 @@ const About = () => {
     
     window.addEventListener('storage', handleStorageChange)
     return () => window.removeEventListener('storage', handleStorageChange)
-  }, [])  // ← Tableau vide, pas de setState synchrone
+  }, [])
 
   const translations = {
     fr: {
@@ -39,7 +37,21 @@ const About = () => {
 
   const t = translations[language]
 
-  const techStack = ['React', 'Tailwind CSS', 'Next.js', 'Node.js', 'PHP', 'Java', 'Symfony', 'MySQL', 'PostgreSQL']
+  const techStack = ['React', 'Tailwind CSS', 'Next.js', 'Node.js', 'PHP', 'Java', 'Symfony', 'MySQL', 'PostgreSQL', 'Python', 'Vue.js']
+
+  // Fonction pour télécharger le CV
+  const handleDownloadCV = () => {
+    // Chemin vers le fichier CV dans le dossier public
+    const cvUrl = '/public/CVlahatra.pdf'  // ← Assure-toi que le fichier s'appelle cv.pdf
+    
+    // Créer un lien temporaire pour télécharger
+    const link = document.createElement('a')
+    link.href = cvUrl
+    link.download = 'CV_Lahatra_FullStack.pdf'  // Nom du fichier téléchargé
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
 
   return (
     <section id="about" className="py-20 bg-gray-50 dark:bg-gray-900/50">
@@ -51,7 +63,14 @@ const About = () => {
             <p className="text-lg leading-relaxed opacity-80">{t.description1}</p>
             <p className="text-lg leading-relaxed opacity-80">{t.description2}</p>
             <p className="text-lg leading-relaxed opacity-80">{t.description3}</p>
-            <button className="btn-primary inline-block">{t.downloadCV}</button>
+            
+            {/* Bouton de téléchargement corrigé */}
+            <button 
+              onClick={handleDownloadCV}
+              className="btn-primary inline-flex items-center gap-2"
+            >
+              📄 {t.downloadCV}
+            </button>
           </div>
           
           <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
