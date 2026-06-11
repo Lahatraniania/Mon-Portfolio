@@ -39,12 +39,12 @@ const About = () => {
 
   const techStack = ['React', 'Tailwind CSS', 'Next.js', 'Node.js', 'PHP', 'Java', 'Symfony', 'MySQL', 'PostgreSQL', 'Python', 'Vue.js']
 
-  // Fonction pour télécharger le CV
+  // ✅ Fonction de téléchargement CORRIGÉE
   const handleDownloadCV = () => {
-    // Chemin vers le fichier CV dans le dossier public
-    const cvUrl = '/public/CVlahatra.pdf'  // ← Assure-toi que le fichier s'appelle cv.pdf
+    // Chemin absolu vers le fichier dans public/
+    const cvUrl = '/cv.pdf'
     
-    // Créer un lien temporaire pour télécharger
+    // Créer un lien de téléchargement
     const link = document.createElement('a')
     link.href = cvUrl
     link.download = 'CV_Lahatra_FullStack.pdf'  // Nom du fichier téléchargé
@@ -64,7 +64,7 @@ const About = () => {
             <p className="text-lg leading-relaxed opacity-80">{t.description2}</p>
             <p className="text-lg leading-relaxed opacity-80">{t.description3}</p>
             
-            {/* Bouton de téléchargement corrigé */}
+            {/* ✅ Bouton de téléchargement corrigé */}
             <button 
               onClick={handleDownloadCV}
               className="btn-primary inline-flex items-center gap-2"
