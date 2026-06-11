@@ -77,7 +77,7 @@ const Footer = () => {
             <div className="flex justify-center md:justify-end gap-4">
               <a href="https://www.facebook.com/lahatraniaina.iarvun" className="hover:opacity-70 transition">Facebook</a>
               <a href="https://www.linkedin.com/in/lahatra-randriamitantsoa-b354023b9/" className="hover:opacity-70 transition">LinkedIn</a>
-              <a href="https://wa.me/+261341366943" className="hover:opacity-70 transition">WhatsApp</a>
+              <a href="https://wa.me/+261337161201" className="hover:opacity-70 transition">WhatsApp</a>
               <a href="https://www.facebook.com/lahatraniaina.iarvun" className="hover:opacity-70 transition">GitHub</a>
             </div>
           </div>
