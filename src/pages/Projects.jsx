@@ -103,11 +103,11 @@ const Projects = () => {
         category: "mobile",
         association: "BAMAFI"
       },
-      {
+{
         id: 8,
         title: "Gestion des Enseignants - Android",
-        description: "Application mobile Android pour la gestion complète des enseignants. CRUD, calcul des salaires, statistiques et graphiques.",
-        longDescription: "Application mobile développée avec Android Studio (Java) pour la gestion des enseignants. Fonctionnalités complètes :\n\n• 📋 **Gestion des enseignants** : Ajouter, modifier, supprimer des enseignants avec leurs informations (numéro, nom, nombre d'heures, taux horaire)\n• 💰 **Calcul automatique du salaire** : Salaire = nombre d'heures × taux horaire\n• 📊 **Affichage en liste** : ListView avec tous les enseignants et leur salaire calculé\n• 📈 **Statistiques en temps réel** : Salaire minimal, maximal et total des salaires affichés en bas de l'écran\n• 🥧 **Visualisation graphique** : Diagramme circulaire (camembert) ou histogramme des salaires avec MPAndroidChart\n• ✏️ **Modification/Suppression** : Action depuis la liste via des boutons ou menu contextuel\n• 💾 **Base de données locale** : SQLite pour le stockage persistant des données\n\nCe projet a été réalisé dans le cadre du développement mobile, démontrant la maîtrise d'Android Studio, Java, SQLite et l'intégration de bibliothèques de graphiques.",
+        description: "Application mobile Android pour la gestion complète des enseignants. CRUD, calcul des salaires, statistiques (min, max, total) et visualisation graphique.",
+        longDescription: "Application mobile développée avec Android Studio (Java) pour la gestion des enseignants. Fonctionnalités complètes :\n\n• 📋 **Gestion des enseignants** : Ajouter, modifier, supprimer des enseignants avec leurs informations (numéro, nom, nombre d'heures, taux horaire)\n\n• 💰 **Calcul automatique du salaire** : Salaire = nombre d'heures × taux horaire (affiché dans la ListView)\n\n• 📊 **Affichage en liste** : ListView présentant pour chaque enseignant : numéro, nom, nombre d'heures, taux horaire et salaire calculé\n\n• 📈 **Statistiques en temps réel** : Affichage en bas du tableau du salaire MINIMAL, MAXIMAL et TOTAL de tous les enseignants (calcul automatique à chaque modification)\n\n• 🥧 **Visualisation graphique** : Diagramme circulaire (camembert) ou histogramme pour visualiser la répartition des salaires (min, max, total)\n\n• ✏️ **Modification/Suppression** : Possibilité de modifier ou supprimer un enregistrement directement depuis la ListView\n\n• 💾 **Base de données locale** : SQLite pour le stockage persistant des données\n\nCe projet a été réalisé dans le cadre du développement mobile, démontrant la maîtrise d'Android Studio, Java, SQLite, les calculs statistiques et l'intégration de bibliothèques de graphiques (MPAndroidChart).",
         image: projet8,
         technologies: ["Android Studio", "Java", "SQLite", "MPAndroidChart", "XML"],
         date: "2026",
@@ -187,16 +187,16 @@ const Projects = () => {
         category: "mobile"
       },
       {
-      id: 8,
-      title: "Gestion des Enseignants - Android",
-      description: "Application mobile Android pour la gestion complète des enseignants. CRUD, calcul des salaires, statistiques (min, max, total) et visualisation graphique.",
-      longDescription: "Application mobile développée avec Android Studio (Java) pour la gestion des enseignants. Fonctionnalités complètes :\n\n• 📋 **Gestion des enseignants** : Ajouter, modifier, supprimer des enseignants avec leurs informations (numéro, nom, nombre d'heures, taux horaire)\n\n• 💰 **Calcul automatique du salaire** : Salaire = nombre d'heures × taux horaire (affiché dans la ListView)\n\n• 📊 **Affichage en liste** : ListView présentant pour chaque enseignant : numéro, nom, nombre d'heures, taux horaire et salaire calculé\n\n• 📈 **Statistiques en temps réel** : Affichage en bas du tableau du salaire MINIMAL, MAXIMAL et TOTAL de tous les enseignants (calcul automatique à chaque modification)\n\n• 🥧 **Visualisation graphique** : Diagramme circulaire (camembert) ou histogramme pour visualiser la répartition des salaires (min, max, total)\n\n• ✏️ **Modification/Suppression** : Possibilité de modifier ou supprimer un enregistrement directement depuis la ListView\n\n• 💾 **Base de données locale** : SQLite pour le stockage persistant des données\n\nCe projet a été réalisé dans le cadre du développement mobile, démontrant la maîtrise d'Android Studio, Java, SQLite, les calculs statistiques et l'intégration de bibliothèques de graphiques (MPAndroidChart).",
-      image: projet8,
-      technologies: ["Android Studio", "Java", "SQLite", "MPAndroidChart", "XML"],
-      date: "2026",
-      category: "mobile",
-      githubLink: "https://github.com/TON_PSEUDO/gestion-enseignants-android"
-    }
+        id: 8,
+        title: "Teacher Management - Android",
+        description: "Android mobile app for complete teacher management. CRUD, salary calculation, statistics (min, max, total) and graphical visualization.",
+        longDescription: "Mobile app developed with Android Studio (Java) for teacher management. Complete features:\n\n• 📋 **Teacher management**: Add, edit, delete teachers with their information (ID, name, hours, hourly rate)\n\n• 💰 **Automatic salary calculation**: Salary = hours × hourly rate (displayed in the ListView)\n\n• 📊 **List display**: ListView showing for each teacher: ID, name, hours, hourly rate, and calculated salary\n\n• 📈 **Real-time statistics**: Display at the bottom of the table the MINIMUM, MAXIMUM, and TOTAL salary of all teachers (automatic calculation on every modification)\n\n• 🥧 **Graphical visualization**: Pie chart or bar chart to visualize salary distribution (min, max, total)\n\n• ✏️ **Edit/Delete**: Modify or delete a record directly from the ListView\n\n• 💾 **Local database**: SQLite for persistent data storage\n\nThis project was developed for mobile development, demonstrating mastery of Android Studio, Java, SQLite, statistical calculations, and chart library integration (MPAndroidChart).",
+        image: projet8,
+        technologies: ["Android Studio", "Java", "SQLite", "MPAndroidChart", "XML"],
+        date: "2026",
+        category: "mobile",
+        githubLink: "https://github.com/TON_PSEUDO/gestion-enseignants-android"
+      }
     ]
   }
 
