@@ -8,6 +8,7 @@ import projet4 from '../assets/images/projet4.png'
 import projet5 from '../assets/images/projet5.png'
 import projet6 from '../assets/images/projet6.png'
 import projet7 from '../assets/images/projet7.png'
+import projet8 from '../assets/images/projet8.png'  // ← NOUVEAU : Ajoute cette image
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null)
@@ -35,7 +36,7 @@ const Projects = () => {
         title: "Gestion de caisse bancaire",
         description: "Application desktop développée en Python pour la gestion complète des opérations de caisse bancaire.",
         longDescription: "Ce projet a été réalisé dans le cadre d'un stage bancaire. Il inclut :\n• Gestion des comptes clients\n• Traçabilité des transactions\n• Génération de relevés bancaires\n• Système d'authentification sécurisé\n• Export de données vers Excel\n• Impression de reçus",
-        image: projet1,  // ← Sans guillemets !
+        image: projet1,
         technologies: ["Python", "Tkinter", "SQLite", "ReportLab"],
         date: "2023",
         category: "desktop"
@@ -45,7 +46,7 @@ const Projects = () => {
         title: "Gestion de l'Église",
         description: "Application web développée en PHP pour la gestion administrative d'une église.",
         longDescription: "Fonctionnalités complètes :\n• Gestion des membres et familles\n• Suivi des dons et offrandes\n• Calendrier des événements religieux\n• Gestion des groupes de prière\n• Envoi de notifications par email\n• Rapports statistiques",
-        image: projet2,  // ← Sans guillemets !
+        image: projet2,
         technologies: ["PHP", "MySQL", "Bootstrap", "JavaScript"],
         date: "2024",
         category: "web"
@@ -55,7 +56,7 @@ const Projects = () => {
         title: "Gestion d'Employeurs",
         description: "Application web moderne avec React et Node.js pour la gestion complète des employés.",
         longDescription: "Solution complète RH :\n• Gestion des fiches de paie\n• Planning et gestion des horaires\n• Suivi des congés et absences\n• Évaluations de performance\n• Dashboard analytique\n• Export PDF des bulletins\n• Notifications automatiques\n• Gestion des documents",
-        image: projet3,  // ← Sans guillemets !
+        image: projet3,
         technologies: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
         date: "2025",
         category: "web"
@@ -65,7 +66,7 @@ const Projects = () => {
         title: "Gestion de Réservation Hôtelière",
         description: "Plateforme complète de réservation d'hôtels en ligne avec React et Node.js.",
         longDescription: "Fonctionnalités avancées :\n• Recherche et filtrage des chambres\n• Calendrier de disponibilité en temps réel\n• Paiement en ligne sécurisé\n• Gestion des utilisateurs et profils\n• Système d'avis et notations\n• Dashboard administrateur\n• Génération de factures\n• Newsletter automatique",
-        image: projet4,  // ← Sans guillemets !
+        image: projet4,
         technologies: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Stripe"],
         date: "2025",
         category: "web"
@@ -75,7 +76,7 @@ const Projects = () => {
         title: "Plateforme Boutique en Ligne",
         description: "Projet de stage chez Spray Info. E-commerce complet avec React, Symfony et PostgreSQL.",
         longDescription: "Solution e-commerce professionnelle :\n• Catalogue produits dynamique\n• Panier d'achat et checkout\n• Paiement sécurisé\n• Gestion des stocks\n• Dashboard vendeur\n• Système de recommandations\n• Support multilingue\n• SEO optimisé\n• Interface responsive\n• Statistiques de vente",
-        image: projet5,  // ← Sans guillemets !
+        image: projet5,
         technologies: ["React", "Symfony", "Tailwind CSS", "PostgreSQL", "API Platform"],
         date: "2025",
         category: "web",
@@ -86,7 +87,7 @@ const Projects = () => {
         title: "Gestion d'Engagement - EDT",
         description: "Application mobile React Native pour la gestion des emplois du temps.",
         longDescription: "Application mobile complète :\n• Gestion des emplois du temps\n• Notifications push\n• Synchronisation cloud\n• Mode hors ligne\n• Export calendrier\n• Partage d'événements\n• Suivi des engagements\n• Statistiques personnelles\n• Interface intuitive",
-        image: projet6,  // ← Sans guillemets !
+        image: projet6,
         technologies: ["React Native", "PostgreSQL", "Node.js", "Expo"],
         date: "2026",
         category: "mobile"
@@ -96,11 +97,22 @@ const Projects = () => {
         title: "Gestion Cartes Membres BAMAFI",
         description: "Application mobile pour l'association BAMAFI à Fianarantsoa.",
         longDescription: "Solution innovante pour l'association :\n• Scan QR code des cartes\n• Vérification en temps réel\n• Gestion des adhésions\n• Suivi des cotisations\n• Dashboard admin\n• Génération de rapports\n• Historique des vérifications\n• Export des données\n• Interface simple et rapide",
-        image: projet7,  // ← Sans guillemets !
+        image: projet7,
         technologies: ["React Native", "Expo Go", "PostgreSQL", "Node.js"],
         date: "2026",
         category: "mobile",
         association: "BAMAFI"
+      },
+      {
+        id: 8,
+        title: "Gestion des Enseignants - Android",
+        description: "Application mobile Android pour la gestion complète des enseignants. CRUD, calcul des salaires, statistiques et graphiques.",
+        longDescription: "Application mobile développée avec Android Studio (Java) pour la gestion des enseignants. Fonctionnalités complètes :\n\n• 📋 **Gestion des enseignants** : Ajouter, modifier, supprimer des enseignants avec leurs informations (numéro, nom, nombre d'heures, taux horaire)\n• 💰 **Calcul automatique du salaire** : Salaire = nombre d'heures × taux horaire\n• 📊 **Affichage en liste** : ListView avec tous les enseignants et leur salaire calculé\n• 📈 **Statistiques en temps réel** : Salaire minimal, maximal et total des salaires affichés en bas de l'écran\n• 🥧 **Visualisation graphique** : Diagramme circulaire (camembert) ou histogramme des salaires avec MPAndroidChart\n• ✏️ **Modification/Suppression** : Action depuis la liste via des boutons ou menu contextuel\n• 💾 **Base de données locale** : SQLite pour le stockage persistant des données\n\nCe projet a été réalisé dans le cadre du développement mobile, démontrant la maîtrise d'Android Studio, Java, SQLite et l'intégration de bibliothèques de graphiques.",
+        image: projet8,
+        technologies: ["Android Studio", "Java", "SQLite", "MPAndroidChart", "XML"],
+        date: "2026",
+        category: "mobile",
+        githubLink: "https://github.com/TON_PSEUDO/gestion-enseignants-android"
       }
     ],
     en: [
@@ -109,7 +121,7 @@ const Projects = () => {
         title: "Bank Cash Management",
         description: "Desktop application in Python for bank cash management.",
         longDescription: "Features:\n• Customer account management\n• Transaction traceability\n• Bank statement generation\n• Secure authentication\n• Excel data export\n• Receipt printing",
-        image: projet1,  // ← Sans guillemets !
+        image: projet1,
         technologies: ["Python", "Tkinter", "SQLite", "ReportLab"],
         date: "2023",
         category: "desktop"
@@ -119,7 +131,7 @@ const Projects = () => {
         title: "Church Management",
         description: "Web application in PHP for church management.",
         longDescription: "Features:\n• Member management\n• Donation tracking\n• Events calendar\n• Prayer groups\n• Email notifications\n• Statistical reports",
-        image: projet2,  // ← Sans guillemets !
+        image: projet2,
         technologies: ["PHP", "MySQL", "Bootstrap", "JavaScript"],
         date: "2024",
         category: "web"
@@ -129,7 +141,7 @@ const Projects = () => {
         title: "Employee Management",
         description: "Modern web app with React and Node.js for employee management.",
         longDescription: "HR solution:\n• Payroll management\n• Schedule planning\n• Leave tracking\n• Performance reviews\n• Analytics dashboard\n• PDF export\n• Notifications\n• Document management",
-        image: projet3,  // ← Sans guillemets !
+        image: projet3,
         technologies: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
         date: "2025",
         category: "web"
@@ -139,7 +151,7 @@ const Projects = () => {
         title: "Hotel Booking System",
         description: "Hotel booking platform with React and Node.js.",
         longDescription: "Features:\n• Room search\n• Real-time availability\n• Secure payment\n• User profiles\n• Reviews system\n• Admin dashboard\n• Invoice generation\n• Newsletter",
-        image: projet4,  // ← Sans guillemets !
+        image: projet4,
         technologies: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Stripe"],
         date: "2025",
         category: "web"
@@ -149,7 +161,7 @@ const Projects = () => {
         title: "E-commerce Platform",
         description: "Internship project at Spray Info. Complete e-commerce platform.",
         longDescription: "E-commerce solution:\n• Product catalog\n• Shopping cart\n• Secure payment\n• Inventory management\n• Seller dashboard\n• Recommendations\n• Multilingual\n• SEO optimized\n• Responsive\n• Sales statistics",
-        image: projet5,  // ← Sans guillemets !
+        image: projet5,
         technologies: ["React", "Symfony", "Tailwind CSS", "PostgreSQL", "API Platform"],
         date: "2025",
         category: "web"
@@ -159,7 +171,7 @@ const Projects = () => {
         title: "Schedule Management App",
         description: "Mobile app with React Native for schedule management.",
         longDescription: "Mobile app:\n• Schedule management\n• Push notifications\n• Cloud sync\n• Offline mode\n• Calendar export\n• Event sharing\n• Commitment tracking\n• Statistics\n• Intuitive interface",
-        image: projet6,  // ← Sans guillemets !
+        image: projet6,
         technologies: ["React Native", "PostgreSQL", "Node.js", "Expo"],
         date: "2026",
         category: "mobile"
@@ -169,10 +181,21 @@ const Projects = () => {
         title: "BAMAFI Member Card Management",
         description: "Mobile app for BAMAFI association member card verification.",
         longDescription: "Solution:\n• QR code scanning\n• Real-time verification\n• Membership management\n• Dues tracking\n• Admin dashboard\n• Report generation\n• History tracking\n• Data export\n• Fast interface",
-        image: projet7,  // ← Sans guillemets !
+        image: projet7,
         technologies: ["React Native", "Expo Go", "PostgreSQL", "Node.js"],
         date: "2026",
         category: "mobile"
+      },
+      {
+        id: 8,
+        title: "Teacher Management - Android",
+        description: "Android mobile app for complete teacher management. CRUD, salary calculation, statistics, and charts.",
+        longDescription: "Mobile app developed with Android Studio (Java) for teacher management. Complete features:\n\n• 📋 **Teacher management**: Add, edit, delete teachers with their information (ID, name, hours, hourly rate)\n• 💰 **Automatic salary calculation**: Salary = hours × hourly rate\n• 📊 **List display**: ListView with all teachers and their calculated salary\n• 📈 **Real-time statistics**: Minimum, maximum, and total salary displayed at the bottom\n• 🥧 **Graphical visualization**: Pie chart or bar chart of salaries using MPAndroidChart\n• ✏️ **Edit/Delete**: Actions from the list via buttons or context menu\n• 💾 **Local database**: SQLite for persistent data storage\n\nThis project was developed for mobile development, demonstrating mastery of Android Studio, Java, SQLite, and chart library integration.",
+        image: projet8,
+        technologies: ["Android Studio", "Java", "SQLite", "MPAndroidChart", "XML"],
+        date: "2026",
+        category: "mobile",
+        githubLink: "https://github.com/TON_PSEUDO/gestion-enseignants-android"
       }
     ]
   }
@@ -302,6 +325,20 @@ const Projects = () => {
                   ))}
                 </div>
               </div>
+
+              {/* Lien GitHub si disponible */}
+              {selectedProject.githubLink && (
+                <div className="mt-6">
+                  <a 
+                    href={selectedProject.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm bg-gray-800 dark:bg-gray-700 text-white px-4 py-2 rounded-lg hover:opacity-80 transition"
+                  >
+                    🔗 {t.githubLink}
+                  </a>
+                </div>
+              )}
             </div>
           </div>
         </div>
