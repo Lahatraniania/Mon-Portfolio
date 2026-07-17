@@ -69,7 +69,7 @@ const Skills = () => {
       { name: 'Android Studio', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg', level: 85 },
       { name: 'AnyDesk', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg', level: 80, customIcon: true },
       { name: 'GNS3', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg', level: 75 },
-      { name: 'Tailscale', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ssh/ssh-original.svg', level: 78 },
+      { name: 'EmailJS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg', level: 85 },
       { name: 'Figma', icon: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg', level: 90 }
     ]
   }
