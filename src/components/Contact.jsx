@@ -65,14 +65,13 @@ const Contact = () => {
     const templateId = 'template_a15leia'
     const publicKey = 'BJORW7adZqcDAyd-p'
 
-    // ✅ TemplateParams amélioré
+    // ✅ Variables complètes pour EmailJS
     const templateParams = {
-      from_name: formData.name,
-      from_email: formData.email,
-      message: formData.message,
-      to_name: 'Lahatra',
-      to_email: 'lahatranandra@gmail.com',  // ← Ton vrai email
-      reply_to: formData.email,
+      from_name: formData.name,           // Nom de l'expéditeur
+      from_email: formData.email,         // Email de l'expéditeur (AJOUTÉ)
+      message: formData.message,          // Message
+      to_name: 'Lahatra',                 // Destinataire
+      reply_to: formData.email,           // Répondre à l'expéditeur
       current_date: new Date().toLocaleString('fr-FR', {
         day: '2-digit',
         month: '2-digit',
