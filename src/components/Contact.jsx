@@ -7,11 +7,9 @@ const Contact = () => {
   const [isLoading, setIsLoading] = useState(false)
 
   const [language, setLanguage] = useState(() => {
-    // Initialisation directe sans useEffect
     return localStorage.getItem('language') || 'fr'
   })
 
-  // Effet UNIQUEMENT pour écouter les changements externes
   useEffect(() => {
     const handleStorageChange = (e) => {
       if (e.key === 'language') {
@@ -21,7 +19,7 @@ const Contact = () => {
     
     window.addEventListener('storage', handleStorageChange)
     return () => window.removeEventListener('storage', handleStorageChange)
-  }, []) 
+  }, [])
 
   const translations = {
     fr: {
@@ -63,17 +61,25 @@ const Contact = () => {
     setIsLoading(true)
     setStatus({ type: '', message: '' })
 
-    // Configuration EmailJS - Remplace par tes vraies clés
-    const serviceId = 'service_emz5z4g'  // À remplacer
-    const templateId = 'template_a15leia' // À remplacer
-    const publicKey = 'BJORW7adZqcDAyd-p'   // À remplacer
+    const serviceId = 'service_emz5z4g'
+    const templateId = 'template_a15leia'
+    const publicKey = 'BJORW7adZqcDAyd-p'
 
+    // ✅ TemplateParams amélioré
     const templateParams = {
       from_name: formData.name,
       from_email: formData.email,
       message: formData.message,
       to_name: 'Lahatra',
-      reply_to: formData.email
+      to_email: 'lahatranandra@gmail.com',  // ← Ton vrai email
+      reply_to: formData.email,
+      current_date: new Date().toLocaleString('fr-FR', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+      })
     }
 
     try {
@@ -81,7 +87,7 @@ const Contact = () => {
       setStatus({ type: 'success', message: t.success })
       setFormData({ name: '', email: '', message: '' })
     } catch (error) {
-      console.error('Erreur:', error)
+      console.error('Erreur détaillée:', error)
       setStatus({ type: 'error', message: t.error })
     } finally {
       setIsLoading(false)
