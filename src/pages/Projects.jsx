@@ -6,7 +6,6 @@ import projet2 from '../assets/images/projet2.png'
 import projet3 from '../assets/images/projet3.png'
 import projet4 from '../assets/images/projet4.png'
 import projet5 from '../assets/images/projet5.png'
-import projet6 from '../assets/images/projet6.png'
 import projet7 from '../assets/images/projet7.png'
 import projet8 from '../assets/images/projet8.png'  // ← NOUVEAU : Ajoute cette image
 
@@ -83,16 +82,6 @@ const Projects = () => {
         company: "Spray Info"
       },
       {
-        id: 6,
-        title: "Gestion d'Engagement - EDT",
-        description: "Application mobile React Native pour la gestion des emplois du temps.",
-        longDescription: "Application mobile complète :\n• Gestion des emplois du temps\n• Notifications push\n• Synchronisation cloud\n• Mode hors ligne\n• Export calendrier\n• Partage d'événements\n• Suivi des engagements\n• Statistiques personnelles\n• Interface intuitive",
-        image: projet6,
-        technologies: ["React Native", "PostgreSQL", "Node.js", "Expo"],
-        date: "2026",
-        category: "mobile"
-      },
-      {
         id: 7,
         title: "Gestion Cartes Membres BAMAFI",
         description: "Application mobile pour l'association BAMAFI à Fianarantsoa.",
@@ -165,16 +154,6 @@ const Projects = () => {
         technologies: ["React", "Symfony", "Tailwind CSS", "PostgreSQL", "API Platform"],
         date: "2025",
         category: "web"
-      },
-      {
-        id: 6,
-        title: "Schedule Management App",
-        description: "Mobile app with React Native for schedule management.",
-        longDescription: "Mobile app:\n• Schedule management\n• Push notifications\n• Cloud sync\n• Offline mode\n• Calendar export\n• Event sharing\n• Commitment tracking\n• Statistics\n• Intuitive interface",
-        image: projet6,
-        technologies: ["React Native", "PostgreSQL", "Node.js", "Expo"],
-        date: "2026",
-        category: "mobile"
       },
       {
         id: 7,
