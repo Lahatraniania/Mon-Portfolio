@@ -37,12 +37,12 @@ const About = () => {
 
   const t = translations[language]
 
-  const techStack = ['React', 'Tailwind CSS', 'Next.js', 'Node.js', 'PHP', 'Java', 'Symfony', 'MySQL', 'PostgreSQL', 'Python', 'Vue.js']
+  const techStack = ['React', 'Python', 'Tailwind CSS', 'Next.js', 'Node.js', 'PHP', 'Java', 'Symfony', 'MySQL', 'PostgreSQL', 'Vue.js']
 
   // ✅ Fonction de téléchargement CORRIGÉE
   const handleDownloadCV = () => {
     // Chemin absolu vers le fichier dans public/
-    const cvUrl = '/cv.pdf'
+    const cvUrl = '/CVPortfolio.pdf'
     
     // Créer un lien de téléchargement
     const link = document.createElement('a')
