@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react'
 
-// Import des images (vérifie que l'extension est correcte : .jpg, .png, etc.)
+// Import des images
 import projet1 from '../assets/images/projet1.png'
 import projet2 from '../assets/images/projet2.png'
 import projet3 from '../assets/images/projet3.png'
 import projet4 from '../assets/images/projet4.png'
 import projet5 from '../assets/images/projet5.png'
 import projet7 from '../assets/images/projet7.png'
-import projet8 from '../assets/images/projet8.png'  // ← NOUVEAU : Ajoute cette image
+import projet8 from '../assets/images/projet8.png'
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null)
@@ -23,53 +23,13 @@ const Projects = () => {
         setLanguage(e.newValue || 'fr')
       }
     }
-    
+
     window.addEventListener('storage', handleStorageChange)
     return () => window.removeEventListener('storage', handleStorageChange)
   }, [])
 
   const projectsData = {
     fr: [
-      {
-        id: 1,
-        title: "Gestion de caisse bancaire",
-        description: "Application desktop développée en Python pour la gestion complète des opérations de caisse bancaire.",
-        longDescription: "Ce projet a été réalisé dans le cadre d'un stage bancaire. Il inclut :\n• Gestion des comptes clients\n• Traçabilité des transactions\n• Génération de relevés bancaires\n• Système d'authentification sécurisé\n• Export de données vers Excel\n• Impression de reçus",
-        image: projet1,
-        technologies: ["Python", "Tkinter", "SQLite", "ReportLab"],
-        date: "2023",
-        category: "desktop"
-      },
-      {
-        id: 2,
-        title: "Gestion de l'Église",
-        description: "Application web développée en PHP pour la gestion administrative d'une église.",
-        longDescription: "Fonctionnalités complètes :\n• Gestion des membres et familles\n• Suivi des dons et offrandes\n• Calendrier des événements religieux\n• Gestion des groupes de prière\n• Envoi de notifications par email\n• Rapports statistiques",
-        image: projet2,
-        technologies: ["PHP", "MySQL", "Bootstrap", "JavaScript"],
-        date: "2024",
-        category: "web"
-      },
-      {
-        id: 3,
-        title: "Gestion d'Employeurs",
-        description: "Application web moderne avec React et Node.js pour la gestion complète des employés.",
-        longDescription: "Solution complète RH :\n• Gestion des fiches de paie\n• Planning et gestion des horaires\n• Suivi des congés et absences\n• Évaluations de performance\n• Dashboard analytique\n• Export PDF des bulletins\n• Notifications automatiques\n• Gestion des documents",
-        image: projet3,
-        technologies: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
-        date: "2025",
-        category: "web"
-      },
-      {
-        id: 4,
-        title: "Gestion de Réservation Hôtelière",
-        description: "Plateforme complète de réservation d'hôtels en ligne avec React et Node.js.",
-        longDescription: "Fonctionnalités avancées :\n• Recherche et filtrage des chambres\n• Calendrier de disponibilité en temps réel\n• Paiement en ligne sécurisé\n• Gestion des utilisateurs et profils\n• Système d'avis et notations\n• Dashboard administrateur\n• Génération de factures\n• Newsletter automatique",
-        image: projet4,
-        technologies: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Stripe"],
-        date: "2025",
-        category: "web"
-      },
       {
         id: 5,
         title: "Plateforme Boutique en Ligne",
@@ -79,7 +39,52 @@ const Projects = () => {
         technologies: ["React", "Symfony", "Tailwind CSS", "PostgreSQL", "API Platform"],
         date: "2025",
         category: "web",
-        company: "Spray Info"
+        company: "Spray Info",
+        githubLink: "https://github.com/Lahatraniania"
+      },
+      {
+        id: 1,
+        title: "Gestion de caisse bancaire",
+        description: "Application desktop développée en Python pour la gestion complète des opérations de caisse bancaire.",
+        longDescription: "Ce projet a été réalisé dans le cadre d'un stage bancaire. Il inclut :\n• Gestion des comptes clients\n• Traçabilité des transactions\n• Génération de relevés bancaires\n• Système d'authentification sécurisé\n• Export de données vers Excel\n• Impression de reçus",
+        image: projet1,
+        technologies: ["Python", "Tkinter", "SQLite", "ReportLab"],
+        date: "2023",
+        category: "desktop",
+        githubLink: "https://github.com/Lahatraniania"
+      },
+      {
+        id: 2,
+        title: "Gestion de l'Église",
+        description: "Application web développée en PHP pour la gestion administrative d'une église.",
+        longDescription: "Fonctionnalités complètes :\n• Gestion des membres et familles\n• Suivi des dons et offrandes\n• Calendrier des événements religieux\n• Gestion des groupes de prière\n• Envoi de notifications par email\n• Rapports statistiques",
+        image: projet2,
+        technologies: ["PHP", "MySQL", "Bootstrap", "JavaScript"],
+        date: "2024",
+        category: "web",
+        githubLink: "https://github.com/Lahatraniania"
+      },
+      {
+        id: 3,
+        title: "Gestion d'Employeurs",
+        description: "Application web moderne avec React et Node.js pour la gestion complète des employés.",
+        longDescription: "Solution complète RH :\n• Gestion des fiches de paie\n• Planning et gestion des horaires\n• Suivi des congés et absences\n• Évaluations de performance\n• Dashboard analytique\n• Export PDF des bulletins\n• Notifications automatiques\n• Gestion des documents",
+        image: projet3,
+        technologies: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+        date: "2025",
+        category: "web",
+        githubLink: "https://github.com/Lahatraniania"
+      },
+      {
+        id: 4,
+        title: "Gestion de Réservation Hôtelière",
+        description: "Plateforme complète de réservation d'hôtels en ligne avec React et Node.js.",
+        longDescription: "Fonctionnalités avancées :\n• Recherche et filtrage des chambres\n• Calendrier de disponibilité en temps réel\n• Paiement en ligne sécurisé\n• Gestion des utilisateurs et profils\n• Système d'avis et notations\n• Dashboard administrateur\n• Génération de factures\n• Newsletter automatique",
+        image: projet4,
+        technologies: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Stripe"],
+        date: "2025",
+        category: "web",
+        githubLink: "https://github.com/Lahatraniania"
       },
       {
         id: 7,
@@ -90,9 +95,10 @@ const Projects = () => {
         technologies: ["React Native", "Expo Go", "PostgreSQL", "Node.js"],
         date: "2026",
         category: "mobile",
-        association: "BAMAFI"
+        association: "BAMAFI",
+        githubLink: "https://github.com/Lahatraniania"
       },
-{
+      {
         id: 8,
         title: "Gestion des Enseignants - Android",
         description: "Application mobile Android pour la gestion complète des enseignants. CRUD, calcul des salaires, statistiques (min, max, total) et visualisation graphique.",
@@ -101,10 +107,22 @@ const Projects = () => {
         technologies: ["Android Studio", "Java", "SQLite", "MPAndroidChart", "XML"],
         date: "2026",
         category: "mobile",
-        githubLink: "https://github.com/TON_PSEUDO/gestion-enseignants-android"
+        githubLink: "https://github.com/Lahatraniania"
       }
     ],
     en: [
+      {
+        id: 5,
+        title: "E-commerce Platform",
+        description: "Internship project at Spray Info. Complete e-commerce platform.",
+        longDescription: "E-commerce solution:\n• Product catalog\n• Shopping cart\n• Secure payment\n• Inventory management\n• Seller dashboard\n• Recommendations\n• Multilingual\n• SEO optimized\n• Responsive\n• Sales statistics",
+        image: projet5,
+        technologies: ["React", "Symfony", "Tailwind CSS", "PostgreSQL", "API Platform"],
+        date: "2025",
+        category: "web",
+        company: "Spray Info",
+        githubLink: "https://github.com/Lahatraniania"
+      },
       {
         id: 1,
         title: "Bank Cash Management",
@@ -113,7 +131,8 @@ const Projects = () => {
         image: projet1,
         technologies: ["Python", "Tkinter", "SQLite", "ReportLab"],
         date: "2023",
-        category: "desktop"
+        category: "desktop",
+        githubLink: "https://github.com/Lahatraniania"
       },
       {
         id: 2,
@@ -123,7 +142,8 @@ const Projects = () => {
         image: projet2,
         technologies: ["PHP", "MySQL", "Bootstrap", "JavaScript"],
         date: "2024",
-        category: "web"
+        category: "web",
+        githubLink: "https://github.com/Lahatraniania"
       },
       {
         id: 3,
@@ -133,7 +153,8 @@ const Projects = () => {
         image: projet3,
         technologies: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
         date: "2025",
-        category: "web"
+        category: "web",
+        githubLink: "https://github.com/Lahatraniania"
       },
       {
         id: 4,
@@ -143,17 +164,8 @@ const Projects = () => {
         image: projet4,
         technologies: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Stripe"],
         date: "2025",
-        category: "web"
-      },
-      {
-        id: 5,
-        title: "E-commerce Platform",
-        description: "Internship project at Spray Info. Complete e-commerce platform.",
-        longDescription: "E-commerce solution:\n• Product catalog\n• Shopping cart\n• Secure payment\n• Inventory management\n• Seller dashboard\n• Recommendations\n• Multilingual\n• SEO optimized\n• Responsive\n• Sales statistics",
-        image: projet5,
-        technologies: ["React", "Symfony", "Tailwind CSS", "PostgreSQL", "API Platform"],
-        date: "2025",
-        category: "web"
+        category: "web",
+        githubLink: "https://github.com/Lahatraniania"
       },
       {
         id: 7,
@@ -163,7 +175,8 @@ const Projects = () => {
         image: projet7,
         technologies: ["React Native", "Expo Go", "PostgreSQL", "Node.js"],
         date: "2026",
-        category: "mobile"
+        category: "mobile",
+        githubLink: "https://github.com/Lahatraniania"
       },
       {
         id: 8,
@@ -174,7 +187,7 @@ const Projects = () => {
         technologies: ["Android Studio", "Java", "SQLite", "MPAndroidChart", "XML"],
         date: "2026",
         category: "mobile",
-        githubLink: "https://github.com/TON_PSEUDO/gestion-enseignants-android"
+        githubLink: "https://github.com/Lahatraniania"
       }
     ]
   }
@@ -193,8 +206,8 @@ const Projects = () => {
     close: language === 'fr' ? 'Fermer' : 'Close'
   }
 
-  const filteredProjects = filter === 'all' 
-    ? projects 
+  const filteredProjects = filter === 'all'
+    ? projects
     : projects.filter(p => p.category === filter)
 
   const handleImageError = (e) => {
@@ -276,7 +289,7 @@ const Projects = () => {
             >
               ✕
             </button>
-            
+
             <div className="p-6 md:p-8">
               <div className="h-64 md:h-96 bg-gray-300 dark:bg-gray-800 rounded-xl mb-6 overflow-hidden">
                 <img
@@ -286,14 +299,14 @@ const Projects = () => {
                   onError={handleImageError}
                 />
               </div>
-              
+
               <h3 className="text-2xl md:text-3xl font-bold mb-2">{selectedProject.title}</h3>
               <p className="text-gray-500 dark:text-gray-400 mb-4">{selectedProject.date}</p>
-              
+
               <div className="prose dark:prose-invert max-w-none mb-6">
                 <p className="text-lg leading-relaxed whitespace-pre-line">{selectedProject.longDescription}</p>
               </div>
-              
+
               <div className="mb-6">
                 <h4 className="font-semibold mb-2">{t.technologies}</h4>
                 <div className="flex flex-wrap gap-2">
@@ -308,7 +321,7 @@ const Projects = () => {
               {/* Lien GitHub si disponible */}
               {selectedProject.githubLink && (
                 <div className="mt-6">
-                  <a 
+                  <a
                     href={selectedProject.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
