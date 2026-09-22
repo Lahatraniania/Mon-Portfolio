@@ -8,6 +8,7 @@ import projet4 from '../assets/images/projet4.png'
 import projet5 from '../assets/images/projet5.png'
 import projet7 from '../assets/images/projet7.png'
 import projet8 from '../assets/images/projet8.png'
+import projetReservation from '../assets/images/projetReservation.png' // ✅ NOUVEAU
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null)
@@ -30,6 +31,19 @@ const Projects = () => {
 
   const projectsData = {
     fr: [
+      // ✅ NOUVEAU PROJET : Reservation_HOTEL (en premier)
+      {
+        id: 9,
+        title: "Reservation_HOTEL - Plateforme de Réservation avec IA",
+        description: "Plateforme complète de réservation d'hôtels à Madagascar avec intelligence artificielle intégrée. Django REST Framework, React, PostgreSQL, Stripe et Gemini AI.",
+        longDescription: "Plateforme innovante de réservation d'hôtels avec intelligence artificielle.\n\n🏨 **Gestion Complète**\n• Système multi-rôles (Client, Propriétaire, Administrateur)\n• Gestion des hôtels et chambres avec photos\n• Réservations en temps réel avec disponibilité dynamique\n• Notifications instantanées pour tous les utilisateurs\n\n💳 **Paiement Sécurisé**\n• Intégration Stripe Checkout\n• Conversion automatique MGA ↔ USD\n• Commission automatique de 1% reversée à l'administrateur\n• Webhooks Stripe pour la confirmation des paiements\n\n🤖 **Intelligence Artificielle (Gemini)**\n• **Agent conversationnel \"Ravorona\"** bilingue (Français/Malgache)\n• **Recommandations personnalisées** basées sur les préférences et l'historique\n• **Génération automatique de contenu** (descriptions d'hôtels, chambres)\n• **Traduction intelligente** français ↔ malgache\n• **Suggestion de prix optimal** basée sur la concurrence\n• **Chatbot multi-actions** : recherche, comparaison, support\n\n📊 **Tableaux de Bord**\n• Dashboard propriétaire : gestion hôtels, chambres, réservations, revenus nets\n• Dashboard admin : validation demandes, commissions, statistiques\n• Espace client : profil, réservations, paiements\n\n🔒 **Sécurité**\n• Authentification JWT avec rôles\n• Protection des données personnelles\n• Conversations IA privées par utilisateur\n• Gestion des permissions par rôle\n\n✨ **Fonctionnalités Avancées**\n• Agent IA multi-conversations\n• Filtrage par ville, type, prix\n• Système de favoris\n• Upload multiple d'images\n• Interface responsive et moderne\n• Design élégant avec TailwindCSS",
+        image: projetReservation,
+        technologies: ["Django", "React", "PostgreSQL", "Tailwind CSS", "Stripe", "Gemini AI", "JWT", "Python"],
+        date: "2026",
+        category: "web",
+        githubLink: "https://github.com/Lahatraniania/Reservation_HOTEL"
+      },
+      // ✅ Projet de stage
       {
         id: 5,
         title: "Plateforme Boutique en Ligne",
@@ -42,6 +56,7 @@ const Projects = () => {
         company: "Spray Info",
         githubLink: "https://github.com/Lahatraniania"
       },
+      // ✅ Autres projets
       {
         id: 1,
         title: "Gestion de caisse bancaire",
@@ -111,6 +126,19 @@ const Projects = () => {
       }
     ],
     en: [
+      // ✅ NEW PROJECT: Reservation_HOTEL (first)
+      {
+        id: 9,
+        title: "Reservation_HOTEL - Booking Platform with AI",
+        description: "Complete hotel booking platform in Madagascar with integrated artificial intelligence. Django REST Framework, React, PostgreSQL, Stripe and Gemini AI.",
+        longDescription: "Innovative hotel booking platform with artificial intelligence.\n\n🏨 **Complete Management**\n• Multi-role system (Client, Owner, Administrator)\n• Hotel and room management with photos\n• Real-time reservations with dynamic availability\n• Instant notifications for all users\n\n💳 **Secure Payment**\n• Stripe Checkout integration\n• Automatic MGA ↔ USD conversion\n• Automatic 1% commission to administrator\n• Stripe webhooks for payment confirmation\n\n🤖 **Artificial Intelligence (Gemini)**\n• **Conversational agent \"Ravorona\"** bilingual (French/Malagasy)\n• **Personalized recommendations** based on preferences and history\n• **Automatic content generation** (hotel/room descriptions)\n• **Intelligent translation** French ↔ Malagasy\n• **Optimal price suggestion** based on competition\n• **Multi-action chatbot**: search, comparison, support\n\n📊 **Dashboards**\n• Owner dashboard: hotels, rooms, reservations, net revenue\n• Admin dashboard: request validation, commissions, statistics\n• Client area: profile, reservations, payments\n\n🔒 **Security**\n• JWT authentication with roles\n• Personal data protection\n• Private AI conversations per user\n• Role-based permissions\n\n✨ **Advanced Features**\n• Multi-conversation AI agent\n• Filtering by city, type, price\n• Favorites system\n• Multiple image upload\n• Responsive and modern interface\n• Elegant design with TailwindCSS",
+        image: projetReservation,
+        technologies: ["Django", "React", "PostgreSQL", "Tailwind CSS", "Stripe", "Gemini AI", "JWT", "Python"],
+        date: "2026",
+        category: "web",
+        githubLink: "https://github.com/Lahatraniania/Reservation_HOTEL"
+      },
+      // ✅ Internship project
       {
         id: 5,
         title: "E-commerce Platform",
@@ -123,6 +151,7 @@ const Projects = () => {
         company: "Spray Info",
         githubLink: "https://github.com/Lahatraniania"
       },
+      // ✅ Other projects
       {
         id: 1,
         title: "Bank Cash Management",
@@ -224,11 +253,10 @@ const Projects = () => {
             <button
               key={cat}
               onClick={() => setFilter(cat)}
-              className={`px-6 py-2 rounded-full transition-all duration-300 ${
-                filter === cat
+              className={`px-6 py-2 rounded-full transition-all duration-300 ${filter === cat
                   ? 'bg-black text-white dark:bg-white dark:text-black'
                   : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600'
-              }`}
+                }`}
             >
               {cat === 'all' && t.filterAll}
               {cat === 'web' && t.filterWeb}
