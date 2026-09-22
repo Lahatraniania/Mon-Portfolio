@@ -8,7 +8,7 @@ import projet4 from '../assets/images/projet4.png'
 import projet5 from '../assets/images/projet5.png'
 import projet7 from '../assets/images/projet7.png'
 import projet8 from '../assets/images/projet8.png'
-import projetReservation from '../assets/images/projetReservation.png' // ✅ NOUVEAU
+import projet9 from '../assets/images/projet9.png' // ✅ Image Reservation_HOTEL
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null)
@@ -31,19 +31,19 @@ const Projects = () => {
 
   const projectsData = {
     fr: [
-      // ✅ NOUVEAU PROJET : Reservation_HOTEL (en premier)
+      // ✅ PROJET 9 : Reservation_HOTEL (PRIORITÉ - 2026)
       {
         id: 9,
         title: "Reservation_HOTEL - Plateforme de Réservation avec IA",
         description: "Plateforme complète de réservation d'hôtels à Madagascar avec intelligence artificielle intégrée. Django REST Framework, React, PostgreSQL, Stripe et Gemini AI.",
         longDescription: "Plateforme innovante de réservation d'hôtels avec intelligence artificielle.\n\n🏨 **Gestion Complète**\n• Système multi-rôles (Client, Propriétaire, Administrateur)\n• Gestion des hôtels et chambres avec photos\n• Réservations en temps réel avec disponibilité dynamique\n• Notifications instantanées pour tous les utilisateurs\n\n💳 **Paiement Sécurisé**\n• Intégration Stripe Checkout\n• Conversion automatique MGA ↔ USD\n• Commission automatique de 1% reversée à l'administrateur\n• Webhooks Stripe pour la confirmation des paiements\n\n🤖 **Intelligence Artificielle (Gemini)**\n• **Agent conversationnel \"Ravorona\"** bilingue (Français/Malgache)\n• **Recommandations personnalisées** basées sur les préférences et l'historique\n• **Génération automatique de contenu** (descriptions d'hôtels, chambres)\n• **Traduction intelligente** français ↔ malgache\n• **Suggestion de prix optimal** basée sur la concurrence\n• **Chatbot multi-actions** : recherche, comparaison, support\n\n📊 **Tableaux de Bord**\n• Dashboard propriétaire : gestion hôtels, chambres, réservations, revenus nets\n• Dashboard admin : validation demandes, commissions, statistiques\n• Espace client : profil, réservations, paiements\n\n🔒 **Sécurité**\n• Authentification JWT avec rôles\n• Protection des données personnelles\n• Conversations IA privées par utilisateur\n• Gestion des permissions par rôle\n\n✨ **Fonctionnalités Avancées**\n• Agent IA multi-conversations\n• Filtrage par ville, type, prix\n• Système de favoris\n• Upload multiple d'images\n• Interface responsive et moderne\n• Design élégant avec TailwindCSS",
-        image: projetReservation,
+        image: projet9,
         technologies: ["Django", "React", "PostgreSQL", "Tailwind CSS", "Stripe", "Gemini AI", "JWT", "Python"],
         date: "2026",
         category: "web",
         githubLink: "https://github.com/Lahatraniania/Reservation_HOTEL"
       },
-      // ✅ Projet de stage
+      // ✅ PROJET 5 : Stage chez Spray Info
       {
         id: 5,
         title: "Plateforme Boutique en Ligne",
@@ -56,7 +56,7 @@ const Projects = () => {
         company: "Spray Info",
         githubLink: "https://github.com/Lahatraniania"
       },
-      // ✅ Autres projets
+      // ✅ PROJET 1
       {
         id: 1,
         title: "Gestion de caisse bancaire",
@@ -68,6 +68,7 @@ const Projects = () => {
         category: "desktop",
         githubLink: "https://github.com/Lahatraniania"
       },
+      // ✅ PROJET 2
       {
         id: 2,
         title: "Gestion de l'Église",
@@ -79,6 +80,7 @@ const Projects = () => {
         category: "web",
         githubLink: "https://github.com/Lahatraniania"
       },
+      // ✅ PROJET 3
       {
         id: 3,
         title: "Gestion d'Employeurs",
@@ -90,6 +92,7 @@ const Projects = () => {
         category: "web",
         githubLink: "https://github.com/Lahatraniania"
       },
+      // ✅ PROJET 4
       {
         id: 4,
         title: "Gestion de Réservation Hôtelière",
@@ -101,6 +104,7 @@ const Projects = () => {
         category: "web",
         githubLink: "https://github.com/Lahatraniania"
       },
+      // ✅ PROJET 7
       {
         id: 7,
         title: "Gestion Cartes Membres BAMAFI",
@@ -113,11 +117,12 @@ const Projects = () => {
         association: "BAMAFI",
         githubLink: "https://github.com/Lahatraniania"
       },
+      // ✅ PROJET 8
       {
         id: 8,
         title: "Gestion des Enseignants - Android",
         description: "Application mobile Android pour la gestion complète des enseignants. CRUD, calcul des salaires, statistiques (min, max, total) et visualisation graphique.",
-        longDescription: "Application mobile développée avec Android Studio (Java) pour la gestion des enseignants. Fonctionnalités complètes :\n\n• 📋 **Gestion des enseignants** : Ajouter, modifier, supprimer des enseignants avec leurs informations (numéro, nom, nombre d'heures, taux horaire)\n\n• 💰 **Calcul automatique du salaire** : Salaire = nombre d'heures × taux horaire (affiché dans la ListView)\n\n• 📊 **Affichage en liste** : ListView présentant pour chaque enseignant : numéro, nom, nombre d'heures, taux horaire et salaire calculé\n\n• 📈 **Statistiques en temps réel** : Affichage en bas du tableau du salaire MINIMAL, MAXIMAL et TOTAL de tous les enseignants (calcul automatique à chaque modification)\n\n• 🥧 **Visualisation graphique** : Diagramme circulaire (camembert) ou histogramme pour visualiser la répartition des salaires (min, max, total)\n\n• ✏️ **Modification/Suppression** : Possibilité de modifier ou supprimer un enregistrement directement depuis la ListView\n\n• 💾 **Base de données locale** : SQLite pour le stockage persistant des données\n\nCe projet a été réalisé dans le cadre du développement mobile, démontrant la maîtrise d'Android Studio, Java, SQLite, les calculs statistiques et l'intégration de bibliothèques de graphiques (MPAndroidChart).",
+        longDescription: "Application mobile développée avec Android Studio (Java) pour la gestion des enseignants. Fonctionnalités complètes :\n\n• 📋 **Gestion des enseignants** : Ajouter, modifier, supprimer des enseignants\n\n• 💰 **Calcul automatique du salaire** : Salaire = nombre d'heures × taux horaire\n\n• 📊 **Affichage en liste** : ListView avec toutes les informations\n\n• 📈 **Statistiques en temps réel** : Salaire MINIMAL, MAXIMAL et TOTAL\n\n• 🥧 **Visualisation graphique** : Diagramme circulaire ou histogramme\n\n• ✏️ **Modification/Suppression** : Directement depuis la ListView\n\n• 💾 **Base de données locale** : SQLite pour le stockage persistant",
         image: projet8,
         technologies: ["Android Studio", "Java", "SQLite", "MPAndroidChart", "XML"],
         date: "2026",
@@ -126,19 +131,19 @@ const Projects = () => {
       }
     ],
     en: [
-      // ✅ NEW PROJECT: Reservation_HOTEL (first)
+      // ✅ PROJECT 9: Reservation_HOTEL (PRIORITY - 2026)
       {
         id: 9,
         title: "Reservation_HOTEL - Booking Platform with AI",
         description: "Complete hotel booking platform in Madagascar with integrated artificial intelligence. Django REST Framework, React, PostgreSQL, Stripe and Gemini AI.",
         longDescription: "Innovative hotel booking platform with artificial intelligence.\n\n🏨 **Complete Management**\n• Multi-role system (Client, Owner, Administrator)\n• Hotel and room management with photos\n• Real-time reservations with dynamic availability\n• Instant notifications for all users\n\n💳 **Secure Payment**\n• Stripe Checkout integration\n• Automatic MGA ↔ USD conversion\n• Automatic 1% commission to administrator\n• Stripe webhooks for payment confirmation\n\n🤖 **Artificial Intelligence (Gemini)**\n• **Conversational agent \"Ravorona\"** bilingual (French/Malagasy)\n• **Personalized recommendations** based on preferences and history\n• **Automatic content generation** (hotel/room descriptions)\n• **Intelligent translation** French ↔ Malagasy\n• **Optimal price suggestion** based on competition\n• **Multi-action chatbot**: search, comparison, support\n\n📊 **Dashboards**\n• Owner dashboard: hotels, rooms, reservations, net revenue\n• Admin dashboard: request validation, commissions, statistics\n• Client area: profile, reservations, payments\n\n🔒 **Security**\n• JWT authentication with roles\n• Personal data protection\n• Private AI conversations per user\n• Role-based permissions\n\n✨ **Advanced Features**\n• Multi-conversation AI agent\n• Filtering by city, type, price\n• Favorites system\n• Multiple image upload\n• Responsive and modern interface\n• Elegant design with TailwindCSS",
-        image: projetReservation,
+        image: projet9,
         technologies: ["Django", "React", "PostgreSQL", "Tailwind CSS", "Stripe", "Gemini AI", "JWT", "Python"],
         date: "2026",
         category: "web",
         githubLink: "https://github.com/Lahatraniania/Reservation_HOTEL"
       },
-      // ✅ Internship project
+      // ✅ PROJECT 5: Internship at Spray Info
       {
         id: 5,
         title: "E-commerce Platform",
@@ -151,7 +156,7 @@ const Projects = () => {
         company: "Spray Info",
         githubLink: "https://github.com/Lahatraniania"
       },
-      // ✅ Other projects
+      // ✅ PROJECT 1
       {
         id: 1,
         title: "Bank Cash Management",
@@ -163,6 +168,7 @@ const Projects = () => {
         category: "desktop",
         githubLink: "https://github.com/Lahatraniania"
       },
+      // ✅ PROJECT 2
       {
         id: 2,
         title: "Church Management",
@@ -174,6 +180,7 @@ const Projects = () => {
         category: "web",
         githubLink: "https://github.com/Lahatraniania"
       },
+      // ✅ PROJECT 3
       {
         id: 3,
         title: "Employee Management",
@@ -185,6 +192,7 @@ const Projects = () => {
         category: "web",
         githubLink: "https://github.com/Lahatraniania"
       },
+      // ✅ PROJECT 4
       {
         id: 4,
         title: "Hotel Booking System",
@@ -196,6 +204,7 @@ const Projects = () => {
         category: "web",
         githubLink: "https://github.com/Lahatraniania"
       },
+      // ✅ PROJECT 7
       {
         id: 7,
         title: "BAMAFI Member Card Management",
@@ -207,11 +216,12 @@ const Projects = () => {
         category: "mobile",
         githubLink: "https://github.com/Lahatraniania"
       },
+      // ✅ PROJECT 8
       {
         id: 8,
         title: "Teacher Management - Android",
         description: "Android mobile app for complete teacher management. CRUD, salary calculation, statistics (min, max, total) and graphical visualization.",
-        longDescription: "Mobile app developed with Android Studio (Java) for teacher management. Complete features:\n\n• 📋 **Teacher management**: Add, edit, delete teachers with their information (ID, name, hours, hourly rate)\n\n• 💰 **Automatic salary calculation**: Salary = hours × hourly rate (displayed in the ListView)\n\n• 📊 **List display**: ListView showing for each teacher: ID, name, hours, hourly rate, and calculated salary\n\n• 📈 **Real-time statistics**: Display at the bottom of the table the MINIMUM, MAXIMUM, and TOTAL salary of all teachers (automatic calculation on every modification)\n\n• 🥧 **Graphical visualization**: Pie chart or bar chart to visualize salary distribution (min, max, total)\n\n• ✏️ **Edit/Delete**: Modify or delete a record directly from the ListView\n\n• 💾 **Local database**: SQLite for persistent data storage\n\nThis project was developed for mobile development, demonstrating mastery of Android Studio, Java, SQLite, statistical calculations, and chart library integration (MPAndroidChart).",
+        longDescription: "Mobile app developed with Android Studio (Java) for teacher management. Complete features:\n\n• 📋 **Teacher management**: Add, edit, delete teachers\n\n• 💰 **Automatic salary calculation**: Salary = hours × hourly rate\n\n• 📊 **List display**: ListView with all information\n\n• 📈 **Real-time statistics**: MINIMUM, MAXIMUM, and TOTAL salary\n\n• 🥧 **Graphical visualization**: Pie chart or bar chart\n\n• ✏️ **Edit/Delete**: Directly from the ListView\n\n• 💾 **Local database**: SQLite for persistent data storage",
         image: projet8,
         technologies: ["Android Studio", "Java", "SQLite", "MPAndroidChart", "XML"],
         date: "2026",
@@ -231,7 +241,7 @@ const Projects = () => {
     technologies: language === 'fr' ? 'Technologies utilisées' : 'Technologies used',
     date: language === 'fr' ? 'Date' : 'Date',
     demoLink: language === 'fr' ? 'Voir la démo' : 'View demo',
-    githubLink: language === 'fr' ? 'Code source' : 'Source code',
+    githubLink: language === 'fr' ? 'Voir le code source' : 'View source code',
     close: language === 'fr' ? 'Fermer' : 'Close'
   }
 
@@ -254,8 +264,8 @@ const Projects = () => {
               key={cat}
               onClick={() => setFilter(cat)}
               className={`px-6 py-2 rounded-full transition-all duration-300 ${filter === cat
-                  ? 'bg-black text-white dark:bg-white dark:text-black'
-                  : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600'
+                ? 'bg-black text-white dark:bg-white dark:text-black'
+                : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600'
                 }`}
             >
               {cat === 'all' && t.filterAll}
@@ -346,16 +356,20 @@ const Projects = () => {
                 </div>
               </div>
 
-              {/* Lien GitHub si disponible */}
+              {/* ✅ LIEN GITHUB CENTRÉ */}
               {selectedProject.githubLink && (
-                <div className="mt-6">
+                <div className="mt-8 flex justify-center">
                   <a
                     href={selectedProject.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm bg-gray-800 dark:bg-gray-700 text-white px-4 py-2 rounded-lg hover:opacity-80 transition"
+                    className="inline-flex items-center gap-3 text-base font-semibold bg-gray-900 dark:bg-white text-white dark:text-black px-8 py-4 rounded-xl hover:scale-105 hover:shadow-xl transition-all duration-300"
                   >
-                    🔗 {t.githubLink}
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    <span>{t.githubLink}</span>
+                    <span className="text-lg">→</span>
                   </a>
                 </div>
               )}
